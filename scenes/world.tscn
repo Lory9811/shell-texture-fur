@@ -1,3 +1,19 @@
-[gd_scene format=3 uid="uid://5rsuitd53kh6"]
+[gd_scene load_steps=3 format=3 uid="uid://5rsuitd53kh6"]
+
+[ext_resource type="Script" path="res://scenes/ground.gd" id="2_wn3dm"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_qtg13"]
+size = Vector2(10, 10)
+orientation = 1
 
 [node name="world" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.95922, 0.282659, 0, -0.282659, 0.95922, 0.553271, 1.83331, 5.88443)
+
+[node name="ground" type="MeshInstance3D" parent="."]
+mesh = SubResource("QuadMesh_qtg13")
+script = ExtResource("2_wn3dm")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.829272, 0.362956, 0.424937, -0.558846, 0.538591, 0.630564, 0, -0.760383, 0.649475, 0, 0, 0)

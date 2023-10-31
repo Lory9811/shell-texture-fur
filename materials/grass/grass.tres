@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://bab6bxmemhdkk"]
+
+[ext_resource type="Shader" path="res://materials/grass/grass.gdshader" id="1_ciqf5"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_ciqf5")
+shader_parameter/density = 100.0
+shader_parameter/height = 0.0
